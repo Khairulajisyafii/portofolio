@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "nexa-heavy";
+  src: url("font/Nexa-Heavy.ttf") format("truetype");
+}
+@font-face {
+  font-family: "nexa-light";
+  src: url("font/Nexa-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto";
+  src: url("font/RobotoMono-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto-bold";
+  src: url("font/RobotoMono-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "roboto-medium";
+  src: url("font/RobotoMono-Medium.ttf") format("truetype");
+}
+
+:root {
+  --cream: #fff8de;
+  --orange: #ff6202;
+  --blue: #576a8f;
+  --lavender: #b7bdf7;
+  --black: #000000;
+  --white: #ffffff;
+  --font-nexa: "nexa-heavy", sans-serif;
+  --font-nexa-light: "nexa-light", sans-serif;
+  --font-roboto: "roboto", monospace;
+  --font-roboto-bold: "roboto-bold", monospace;
+  --font-roboto-medium: "roboto-medium", monospace;
+}
+
+html {
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.orange-grid-bg {
+  background-color: var(--orange);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
