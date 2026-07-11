@@ -61,3 +61,41 @@ body {
     linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: 34px 34px;
 }
+
+/* ---- Jump-into-actions nav (reused) ---- */
+.jump-actions {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  text-align: right;
+  z-index: 10;
+}
+.jump-title {
+  font-family: var(--font-nexa);
+  font-size: 22px;
+  color: var(--cream);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.jump-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+.jump-btn {
+  display: inline-block;
+  padding: 6px 18px;
+  border: 2px solid var(--white);
+  color: var(--white);
+  font-family: var(--font-roboto);
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.jump-btn:hover {
+  background: var(--white);
+  color: var(--black);
+}
