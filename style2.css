@@ -1,0 +1,139 @@
+.slide-home {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-splash {
+  position: absolute;
+  z-index: 0;
+  top: 15%;
+  width: clamp(200px, 40vw, 500px);
+  height: auto;
+}
+
+.head-home {
+  font-family: var(--font-roboto);
+  position: relative;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  z-index: 1;
+  font-size: clamp(5px, 1.5vw, 70px);
+}
+.center-home-text {
+  position: absolute;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-nexa);
+  z-index: 1;
+  font-size: clamp(20px, 9vw, 100px);
+  line-height: 0.8;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.center-home-text .n1 {
+  -webkit-text-stroke-color: black;
+  color: var(--orange);
+}
+.center-home-text .n2 {
+  -webkit-text-stroke-color: black;
+  color: var(--lavender);
+}
+.center-home-text .n3 {
+  -webkit-text-stroke-color: black;
+  color: var(--blue);
+}
+.hero-img {
+  position: relative;
+  z-index: 4;
+  width: clamp(200px, 25vw, 500px);
+  height: auto;
+}
+.center-home {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 60vh;
+  z-index: 1;
+  width: 90%;
+}
+.hero {
+  top: 0vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.big-role-home {
+  z-index: 5;
+  position: relative;
+  transform: translateY(-10px);
+  font-size: clamp(10px, 4vw, 40px);
+  font-family: var(--font-roboto);
+  background-color: black;
+  color: white;
+  text-align: center;
+  background-size: cover;
+}
+.child-role-home {
+  font-family: var(--font-roboto);
+  color: white;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 2vw;
+}
+.child-role-home div p {
+  background-color: black;
+}
+.home-button {
+  display: flex;
+  position: relative;
+  gap: 30px;
+  justify-content: center;
+  width: fit-content;
+  margin-top: 70px;
+}
+.home-button div {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  text-align: center;
+  position: relative;
+  font-family: var(--font-nexa-light);
+  font-size: 1.5vw;
+  height: fit-content;
+}
+.home-button div .button {
+  background-color: white;
+  z-index: 2;
+
+  text-wrap: nowrap;
+  padding: 5px 20px;
+  width: 22vw;
+}
+.home-button div .button:hover {
+  transform: translateY(1vw);
+}
+.home-button div .shadow {
+  position: relative;
+  z-index: 1;
+  height: 1vw;
+  background-color: black;
+  width: 22vw;
+}

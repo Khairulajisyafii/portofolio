@@ -60,118 +60,9 @@
   }
   .about-social-bar {
     gap: 14px;
-    padding: 12px 20px;
   }
   .about-social-bar img {
     width: 36px;
-  }
-}
-
-@media screen and (max-width: 768px) and (min-width: 300px) {
-  /* --- Home / Hero Section --- */
-  .home-nav-name {
-    font-size: 10px;
-  }
-  .hero-line {
-    font-size: clamp(10px, 6.5vw, 100px);
-    line-height: 0.6;
-    -webkit-text-stroke: clamp(0.5px, 0.02vw, 3px) black;
-  }
-  .hero-title-box h1 {
-    font-size: 15px;
-  }
-  .btn-front {
-    font-size: 2vw;
-    padding: clamp(2px, 1.5vw, 12px) clamp(16px, 5vw, 40px); /* Dioptimalkan dari 3200px agar tidak rusak */
-    text-wrap: nowrap;
-    border: 1px solid var(--black);
-  }
-  .hero-cta {
-    bottom: 15vh;
-  }
-  .home-mask {
-    height: 450px;
-    object-fit: cover;
-    object-position: center;
-  }
-  .hero-cloud-1 {
-    width: 50vh;
-  }
-  .hero-person {
-    width: 200px;
-  }
-
-  /* --- About Section --- */
-  .slide-about {
-    padding: 16px 16px 0;
-  }
-  .about-title {
-    margin-bottom: 2vh;
-  }
-  .about-title h2 {
-    font-size: 24px;
-    padding: 4px 16px;
-    border-bottom: 2px solid var(--white);
-  }
-  .about-card-wrapper {
-    width: 100%;
-    max-height: none;
-  }
-  .about-card-left {
-    padding: 20px 16px 12px;
-  }
-  .motto-line {
-    font-size: 5.8vw;
-  }
-  .about-card-left .card-shadow {
-    top: 6px;
-    left: 6px;
-  }
-  .about-card-right {
-    padding: 20px 16px 16px;
-    gap: 16px;
-  }
-  .about-card-right .card-shadow {
-    top: 6px;
-    right: -6px;
-    width: calc(100% + 6px);
-  }
-  .about-info-col {
-    width: 100%;
-  }
-  .about-label {
-    font-size: 12px;
-    margin-top: 12px;
-  }
-  .about-value {
-    font-size: 14px;
-  }
-  .about-desc-col p {
-    font-size: 13px;
-    line-height: 1.5;
-  }
-  .about-stats-row span {
-    font-size: 9px;
-    padding: 2px 5px;
-  }
-  .about-comments-btn {
-    font-size: 11px;
-    padding: 3px 10px;
-    margin-right: 0px;
-    align-self: flex-end;
-  }
-  .about-social-bar {
-    gap: 12px;
-    padding: 10px 16px;
-  }
-  .about-social-bar img {
-    width: 32px;
-  }
-  .about-card-bottom {
-    display: flex;
-  }
-  .jump-actions {
-    display: none;
   }
 }
 
@@ -235,15 +126,5 @@
   }
   .about-social-bar img {
     width: 28px;
-  }
-}
-
-@media (max-height: 730px) {
-  .jump-actions {
-    display: none;
-  }
-  .about-social-bar {
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
