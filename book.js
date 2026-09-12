@@ -84,3 +84,31 @@ right.addEventListener("click", () => {
     bookLogic(index, prevIndex);
   }
 });
+
+// Swipe support for mobile
+let touchstartX = 0;
+let touchendX = 0;
+
+document.querySelector('.slide-skills').addEventListener('touchstart', e => {
+  touchstartX = e.changedTouches[0].screenX;
+});
+
+document.querySelector('.slide-skills').addEventListener('touchend', e => {
+  touchendX = e.changedTouches[0].screenX;
+  if (touchendX < touchstartX - 50) {
+    // swipe left -> next page
+    if (index < 3 && !isAnimating) {
+      let prevIndex = index;
+      index++;
+      bookLogic(index, prevIndex);
+    }
+  }
+  if (touchendX > touchstartX + 50) {
+    // swipe right -> prev page
+    if (index > 1 && !isAnimating) {
+      let prevIndex = index;
+      index--;
+      bookLogic(index, prevIndex);
+    }
+  }
+});

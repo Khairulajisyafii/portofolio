@@ -317,6 +317,9 @@
 }
 
 @media (max-width: 768px) {
+  .left-buttonbook, .right-buttonbook {
+    display: none;
+  }
   .parent-book {
     width: 65vw;
   }

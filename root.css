@@ -48,6 +48,14 @@ body {
   min-height: 600px;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .slide {
+    height: auto;
+    min-height: 100vh;
+  }
 }
 
 .orange-grid-bg {

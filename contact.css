@@ -105,9 +105,13 @@
 
 @media (max-width: 600px) {
   .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 5vw;
-    margin-top: 8vw;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6vw 4vw;
+    margin-top: 10vh;
+  }
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
   }
   .contact-mask {
     min-height: 50vh;

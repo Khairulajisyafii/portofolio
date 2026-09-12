@@ -338,3 +338,32 @@
   box-shadow: 6px 6px 0px var(--black, #000);
   background: var(--lavender, #c4b5fd);
 }
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 160px;
+    height: 220px;
+    border-radius: 12px;
+    border-width: 3px;
+  }
+  .project-info {
+    padding: 1vh 2vw;
+    gap: 0.5vh;
+  }
+  .project-info h3 {
+    font-size: 13px;
+  }
+  .project-info p {
+    font-size: 9px;
+  }
+  .project-tech {
+    gap: 1vw;
+  }
+  .project-tech span {
+    font-size: 8px;
+    padding: 2px 5px;
+  }
+  .project-footer-tilted {
+    margin-top: -10vh;
+  }
+}
