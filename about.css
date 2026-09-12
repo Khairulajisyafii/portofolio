@@ -278,3 +278,14 @@
     height: 20px;
   }
 }
+
+/* Make marquee sit on the border between slide 2 and 3 */
+.slide-about {
+  overflow: visible !important;
+  z-index: 50;
+}
+.slide-about .about-footer {
+  transform: translateY(60%);
+  position: relative;
+  z-index: 60;
+}
