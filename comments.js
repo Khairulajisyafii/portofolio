@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const allOtherSlides = document.querySelectorAll(".slide:not(#comments)");
   const loginOverlay = document.getElementById("loginOverlay");
   const commentsContainer = document.getElementById("commentsContainer");
+  const neoNav = document.querySelector(".neo-nav");
+  const neoHamburgerBtn = document.querySelector(".neo-hamburger-btn");
+  const hamburgerWrapper = document.querySelector(".neo-hamburger-wrapper");
 
   if (openBtn) {
     openBtn.addEventListener("click", () => {
@@ -14,18 +17,21 @@ document.addEventListener("DOMContentLoaded", () => {
       allOtherSlides.forEach(slide => {
         slide.style.display = "none";
       });
+      if (neoNav) neoNav.style.display = "none";
+      if (neoHamburgerBtn) neoHamburgerBtn.style.display = "none";
+      if (hamburgerWrapper) hamburgerWrapper.style.display = "none";
 
       // Show the comments slide
       commentsSlide.style.display = "flex";
       window.scrollTo(0, 0);
 
       // Handle login state
-      if (!hasLoggedIn) {
+      if (!hasLoggedIn && loginOverlay) {
         loginOverlay.style.display = "flex";
-        commentsContainer.classList.add("blurred");
-      } else {
+        if (commentsContainer) commentsContainer.classList.add("blurred");
+      } else if (loginOverlay) {
         loginOverlay.style.display = "none";
-        commentsContainer.classList.remove("blurred");
+        if (commentsContainer) commentsContainer.classList.remove("blurred");
       }
     });
   }
@@ -39,6 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
       allOtherSlides.forEach(slide => {
         slide.style.display = "";
       });
+      if (neoNav) neoNav.style.display = "";
+      if (neoHamburgerBtn) neoHamburgerBtn.style.display = "";
+      if (hamburgerWrapper) hamburgerWrapper.style.display = "";
 
       // Scroll smoothly back to the About section
       const aboutEl = document.getElementById("about");
