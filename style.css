@@ -856,3 +856,25 @@
   background: var(--orange);
   color: var(--black);
 }
+
+@media (max-width: 768px) {
+  .neo-hamburger-wrapper {
+    display: none !important;
+  }
+}
+@media (min-width: 769px) {
+  .neo-hamburger-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .neo-hamburger-wrapper {
+    display: none !important;
+  }
+}
+@media (min-width: 769px) {
+  .neo-hamburger-btn {
+    display: none !important;
+  }
+}
