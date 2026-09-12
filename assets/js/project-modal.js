@@ -2,7 +2,7 @@ const projectData = {
   efficiweb: {
     title: "Efficiweb",
     subtitle: "Minimalist Frontend Developer Companion",
-    youtubeId: "dQw4w9WgXcQ", 
+    youtubeId: "fUfrex8StJw", 
     repoLink: "https://github.com/Khairulajisyafii/Efficiweb",
     webLink: "https://www.mediafire.com/file/8z0f59ys4t2f7ud/Efficiweb+2.0.rar/file",
     webLabel: "DOWNLOAD",
@@ -36,7 +36,7 @@ const projectData = {
   waveflow: {
     title: "Waveflow",
     subtitle: "Terpusat menggabungkan manajemen proyek Kanban dengan CI/CD",
-    youtubeId: "dQw4w9WgXcQ",
+    youtubeId: "47Aftq8pVTI",
     repoLink: "https://github.com/Khairulajisyafii/Waveflow-",
     webLink: "https://waveflow-sepia.vercel.app/",
     webLabel: "VISIT WEB",
