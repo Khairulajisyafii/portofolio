@@ -87,7 +87,7 @@
         <a href="#project" class="hamburger-link hamburger-jump">PROJECT</a>
         <a href="#contact" class="hamburger-link hamburger-jump">CONTACT</a>
         <a href="#" class="hamburger-link" id="theme-toggle">🌗 DARK MODE</a>
-        <a href="javascript:void(0)" class="hamburger-link" id="hamburger-comment-btn">COMMENTS</a>
+        <a href="javascript:void(0)" class="hamburger-link" id="hamburger-comment-btn">COMMENTS (COMING SOON)</a>
         <a href="#" class="hamburger-link">LOGIN (COMING SOON)</a>
         <a href="#" class="hamburger-link">INFO (COMING SOON)</a>
       </div>
@@ -168,7 +168,7 @@
                 <span class="tag">4+ CERTIFICATE</span>
                 <span class="tag">⭐ 2K+ STARRED</span>
               </div>
-              <a href="javascript:void(0)" class="comment-button" id="openCommentsBtn" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">COMMENTS</a>
+              <a href="javascript:void(0)" class="comment-button" id="openCommentsBtn" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">COMMENTS (COMING SOON)</a>
             </div>
           </div>
           
@@ -689,124 +689,12 @@
 </section>
 
     <!-- Slide 6: Comments -->
-    <section class="slide slide-comments orange-grid-bg" id="comments" style="display: none;">
-      <a href="javascript:void(0)" class="back-btn" id="closeCommentsBtn">← BACK</a>
+    <section class="slide slide-comments orange-grid-bg" id="comments" style="display: none; justify-content: center; align-items: center; text-align: center; height: 100vh;">
+      <a href="javascript:void(0)" class="back-btn" id="closeCommentsBtn" style="position: absolute; top: 20px; left: 20px;">BACK</a>
       
-      <!-- Login Overlay -->
-      <div class="login-overlay" id="loginOverlay">
-        <div class="login-modal">
-          <h2>LOGIN TO COMMENT</h2>
-          <p>Join the discussion by logging in or continue as guest.</p>
-          
-          <!-- Email Login Form -->
-          <div class="email-login-form">
-            <input type="email" class="login-input" placeholder="Email Address" />
-            <input type="password" class="login-input" placeholder="Password" />
-            <button class="login-submit-btn" onclick="dismissLogin()">LOGIN</button>
-          </div>
-
-          <div class="login-divider">
-            <span>OR</span>
-          </div>
-
-          <!-- Social Login Buttons -->
-          <div class="login-buttons">
-            <button class="login-icon-btn fb-btn" title="Facebook" onclick="dismissLogin()">📘</button>
-            <button class="login-icon-btn github-btn" title="GitHub" onclick="dismissLogin()">🐙</button>
-            <button class="login-icon-btn google-btn" title="Google" onclick="dismissLogin()">🔴</button>
-            <button class="login-btn guest-btn" onclick="dismissLogin()">👤 GUEST</button>
-          </div>
-        </div>
-      </div>
-      
-      <div class="comments-container" id="commentsContainer">
-        <div class="comments-header">
-          <h2>142 Comments</h2>
-          <div class="sort-by">
-            <span class="sort-label">Sort by:</span>
-            <select class="sort-select">
-              <option>Top Comments</option>
-              <option>Newest First</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Add Comment Input (YouTube style) -->
-        <div class="comment-input-row">
-          <div class="comment-avatar" style="background-image: url('assets/image/me.png'); background-size: cover; background-position: top;"></div>
-          <div class="comment-input-wrapper">
-            <input type="text" class="youtube-input" placeholder="Add a comment..." />
-            <div class="comment-input-actions">
-              <button class="cancel-btn">CANCEL</button>
-              <button class="submit-btn">COMMENT</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Comments List -->
-        <div class="comments-list">
-          
-          <!-- Comment Thread 1 -->
-          <div class="comment-thread">
-            <div class="comment-box">
-              <div class="comment-avatar" style="background-color: var(--blue);"></div>
-              <div class="comment-content">
-                <div class="comment-meta">
-                  <span class="comment-author">ALICE</span>
-                  <span class="comment-badge">GUEST</span>
-                  <span class="comment-date">2 hours ago</span>
-                </div>
-                <p class="comment-text">This portfolio is fire! Love the retro brutalist vibe. The CSS animations are super smooth and I really like the layout. Reminds me of old school forums but with a modern twist.</p>
-                <div class="comment-actions">
-                  <button class="comment-action-btn">👍 <span class="action-count">12</span></button>
-                  <button class="comment-action-btn">👎</button>
-                  <button class="comment-action-btn reply-btn">REPLY</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Nested Reply -->
-            <div class="comment-replies">
-              <div class="comment-box reply-box">
-                <div class="comment-avatar" style="background-image: url('assets/image/me.png'); background-size: cover; background-position: top;"></div>
-                <div class="comment-content">
-                  <div class="comment-meta">
-                    <span class="comment-author">KHAIRUL AJI</span>
-                    <span class="comment-badge dev-badge">DEVELOPER</span>
-                    <span class="comment-date">1 hour ago</span>
-                  </div>
-                  <p class="comment-text">Thanks Alice! I spent a lot of time tweaking the CSS to get that exact brutalist feel. Glad you noticed the smooth animations!</p>
-                  <div class="comment-actions">
-                    <button class="comment-action-btn">👍 <span class="action-count">45</span></button>
-                    <button class="comment-action-btn">👎</button>
-                    <button class="comment-action-btn reply-btn">REPLY</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Comment Thread 2 -->
-          <div class="comment-thread">
-            <div class="comment-box">
-              <div class="comment-avatar" style="background-color: var(--lavender);"></div>
-              <div class="comment-content">
-                <div class="comment-meta">
-                  <span class="comment-author">BOB_THE_BUILDER</span>
-                  <span class="comment-badge">MEMBER</span>
-                  <span class="comment-date">1 day ago</span>
-                </div>
-                <p class="comment-text">Wow, the UI is really unique. Great job on the CSS! Do you plan on adding a backend to this comment section?</p>
-                <div class="comment-actions">
-                  <button class="comment-action-btn">👍 <span class="action-count">3</span></button>
-                  <button class="comment-action-btn">👎</button>
-                  <button class="comment-action-btn reply-btn">REPLY</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
+      <div class="coming-soon-container">
+        <h1 style="font-family: var(--font-nexa); font-size: clamp(40px, 8vw, 80px); color: var(--black); text-shadow: 4px 4px 0px var(--white); margin-bottom: 20px;">COMING SOON</h1>
+        <p style="font-family: var(--font-roboto); font-size: clamp(16px, 3vw, 24px); font-weight: bold; background: var(--black); color: var(--white); padding: 10px 20px; display: inline-block; border-radius: 8px;">THE COMMENTS & LOGIN FEATURE IS UNDER DEVELOPMENT</p>
       </div>
     </section>
 
