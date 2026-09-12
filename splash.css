@@ -208,3 +208,14 @@ body.splash-revealed .slide-home .hero-cta { opacity: 1; transform: translate(-5
 .hero-cta .btn-3d:nth-child(2) {
   animation-delay: 2s;
 }
+
+@media (max-width: 768px) {
+  .splash-center {
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .splash-line-1, .splash-line-2, .splash-line-3, .splash-line-4 {
+    text-align: center;
+  }
+}
