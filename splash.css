@@ -213,9 +213,19 @@ body.splash-revealed .slide-home .hero-cta { opacity: 1; transform: translate(-5
   .splash-center {
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    width: 90%;
+    margin: 0 auto;
   }
-  .splash-line-1, .splash-line-2, .splash-line-3, .splash-line-4 {
+  .splash-line-wrapper {
+    width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .splash-line {
+    text-align: center;
+  }
+  .splash-line-2 {
+    font-size: clamp(24px, 6vw, 40px); /* scale down on mobile so it doesn't wrap awkwardly */
   }
 }
