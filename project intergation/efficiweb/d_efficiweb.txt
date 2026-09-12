@@ -1,0 +1,55 @@
+# Efficiweb: Minimalist Frontend Developer Companion
+
+## 1. Latar Belakang Masalah (The Problem)
+
+Sebagai Frontend Developer, aktivitas sehari-hari sering melibatkan berbagai aset kecil seperti kode warna, link dokumentasi, file Figma, API, hingga potongan kode CSS yang digunakan berulang kali. Meskipun terlihat sederhana, mencari dan berpindah-pindah antara berbagai aplikasi untuk mengakses aset tersebut dapat mengganggu fokus dan memperlambat workflow.
+
+Masalah tersebut mendorong saya untuk membuat **Efficiweb**, sebuah aplikasi desktop ringan yang membantu Frontend Developer menyimpan dan mengakses aset coding dari satu tempat tanpa harus sering berpindah aplikasi.
+
+## 2. Solusi (The Solution)
+
+**Efficiweb** dirancang sebagai companion yang selalu tersedia di sisi layar developer. Aplikasi ini memungkinkan pengguna menyimpan berbagai aset yang sering digunakan dan mengaksesnya dengan cepat ketika sedang melakukan coding.
+
+Saya berfokus pada dua hal utama: **mempermudah pengelolaan aset coding** dan **meminimalkan gangguan terhadap area kerja utama developer**.
+
+## 3. Fitur Utama (Core Features)
+
+### Smart Asset Management
+
+Efficiweb menyediakan satu tempat untuk menyimpan berbagai kebutuhan coding sehari-hari.
+
+**Color Palette**
+
+Pengguna dapat memasukkan kode warna dalam berbagai format seperti `HEX`, `RGB`, atau `HSL`. Sistem kemudian memproses dan menyimpan representasi warna tersebut sehingga pengguna dapat menyalin warna yang dibutuhkan hanya dengan satu klik.
+
+**Global & Project Links**
+
+Pengguna dapat menyimpan link yang sering digunakan, seperti dokumentasi, file Figma, dan API. Setiap link dapat diberi nama dan ikon emoji untuk mempermudah identifikasi.
+
+**CSS Vault**
+
+Potongan kode CSS yang sering digunakan dapat disimpan dan digunakan kembali tanpa harus mencari kembali dari project atau file sebelumnya.
+
+### Dynamic Resizable UI
+
+Efficiweb dirancang untuk menggunakan ruang layar seminimal mungkin agar tidak mengganggu code editor.
+
+Sidebar dapat diubah ukurannya secara dinamis. Ketika ukurannya diperkecil hingga batas tertentu, teks navigasi secara otomatis disembunyikan dan digantikan dengan ikon sehingga aplikasi dapat berubah menjadi sebuah toolbar vertikal yang ringkas.
+
+Salah satu tantangan utama dalam fitur ini adalah menjaga proses resize tetap responsif dan menghindari flicker ketika ukuran window berubah secara terus-menerus.
+
+## 4. Kompleksitas Teknis (Technical Highlights)
+
+Efficiweb dibangun sebagai aplikasi desktop ringan menggunakan **Python dan CustomTkinter**, dengan **JSON sebagai local database** untuk menyimpan data pengguna.
+
+Salah satu bagian yang paling menantang adalah membuat antarmuka yang tetap responsif ketika pengguna melakukan resize window secara cepat. Saya perlu mengatur perubahan ukuran, layout, visibility elemen, serta transisi antara tampilan penuh dan tampilan icon-only agar aplikasi tetap nyaman digunakan.
+
+Saya juga membuat sistem pengelolaan aset secara lokal sehingga pengguna dapat menyimpan dan mengakses data tanpa bergantung pada koneksi internet atau server eksternal.
+
+## 5. Pembelajaran yang Saya Dapatkan (Learning Outcomes)
+
+Melalui project ini, saya belajar bahwa sebuah aplikasi tidak selalu harus memiliki banyak fitur untuk menyelesaikan sebuah masalah. Dengan memahami workflow pengguna, saya dapat memfokuskan aplikasi pada masalah kecil tetapi terjadi berulang kali dalam aktivitas sehari-hari.
+
+Saya juga belajar mengenai pengembangan aplikasi desktop, pengelolaan data secara lokal, manipulasi UI secara dinamis, serta bagaimana menjaga pengalaman pengguna tetap sederhana meskipun implementasi teknis di baliknya cukup kompleks.
+
+Project ini mengajarkan saya untuk lebih memperhatikan **bagaimana sebuah fitur digunakan**, bukan hanya apakah fitur tersebut dapat bekerja.

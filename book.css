@@ -25,6 +25,7 @@
   aspect-ratio: 1 / 1.4;
   position: relative;
   display: flex;
+  margin-top: 15vh;
   perspective: 1200px;
   transition: transform 0.5s ease-in-out;
   box-sizing: border-box;
@@ -198,8 +199,9 @@
 
 /* ---------- tech icon grid ---------- */
 .parent-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: clamp(10px, 1.5vw, 24px);
   padding: clamp(10px, 2vw, 30px) clamp(15px, 2.5vw, 40px);
   width: 100%;
@@ -212,8 +214,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   text-align: center;
+  flex: 1 1 25%; /* Grow to fill space, base width roughly 1/3 */
+  background: var(--cream, #fff);
+  border: 3px solid var(--black);
+  box-shadow: 4px 4px 0px var(--black);
+  padding: 10px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+.box:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--black);
+  background: var(--lavender, #cbb5e2);
 }
 
 .box img {
@@ -232,63 +249,50 @@
 /* ============================================
    NAVIGATION ARROWS (left / right)
    ============================================ */
+
 .left-buttonbook,
 .right-buttonbook {
   flex-shrink: 0;
   z-index: 10;
   cursor: pointer;
-  width: clamp(45px, 5.5vw, 80px);
-  height: clamp(55px, 6.5vw, 95px);
+  width: clamp(40px, 5vw, 60px);
+  height: clamp(40px, 5vw, 60px);
   position: relative;
-  transition: transform 0.5s ease-in-out;
-
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   bottom: 100px;
-}
-
-/* shadow layer (black, offset) */
-.left-buttonbook::before,
-.right-buttonbook::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 100%;
-  height: 100%;
-  background: var(--black);
-  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
-}
-
-/* cream fill layer */
-.left-buttonbook::after,
-.right-buttonbook::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: var(--cream);
-  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+  border: 4px solid var(--black);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 0px var(--black);
 }
 
-/* right arrow: mirror the triangle */
-.right-buttonbook::before {
-  clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+.left-buttonbook::after {
+  content: "◀";
+  font-size: 24px;
+  color: var(--black);
+  line-height: 1;
 }
 
 .right-buttonbook::after {
-  clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+  content: "▶";
+  font-size: 24px;
+  color: var(--black);
+  line-height: 1;
 }
 
-/* hover & active */
 .left-buttonbook:hover,
 .right-buttonbook:hover {
-  filter: brightness(1.1);
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--black);
 }
 
 .left-buttonbook:active,
 .right-buttonbook:active {
-  filter: brightness(0.9);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--black);
 }
 
 /* ============================================
@@ -345,7 +349,6 @@
     left: calc(50% - 35% - 2.25%);
   }
   .parent-grid {
-    grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     padding: 10px;
   }

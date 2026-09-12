@@ -9,16 +9,88 @@
       content="Portfolio of Khairul Aji Syafi'i — Full-Stack Web Developer & DevOps Enthusiast based in Tangerang, Indonesia."
     />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="root.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="root.css?v=4" />
+    <link rel="stylesheet" href="style.css?v=4" />
+    <link rel="stylesheet" href="about.css?v=2" />
     <link rel="stylesheet" href="responsive.css" />
     <link rel="stylesheet" href="book.css" />
-  </head>
+    <link rel="stylesheet" href="project.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="comments.css" />
+    <link rel="stylesheet" href="splash.css" />
+    <link rel="stylesheet" href="animation.css" />
 
-  <body>
+  <body class="splash-active">
+
+  <!-- NEO HAMBURGER MENU -->
+  <div class="neo-hamburger-wrapper">
+    <button id="neo-hamburger-btn" class="neo-hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div id="neo-hamburger-menu" class="neo-hamburger-menu">
+      <a href="#" id="toggle-dark-mode">DARK MODE</a>
+      <a href="#">LOGIN</a>
+      <a href="#">INFO</a>
+    </div>
+  </div>
+    <!-- ===== ENTRANCE SPLASH SCREEN ===== -->
+    <div id="splash-screen">
+      <!-- Corner bracket accents -->
+      <div class="splash-accent tl"></div>
+      <div class="splash-accent tr"></div>
+      <div class="splash-accent bl"></div>
+      <div class="splash-accent br"></div>
+
+      <div class="splash-center">
+        <div class="splash-line-wrapper"><div class="splash-line splash-line-1" id="splash-l1">HEY YOU,</div></div>
+        <div class="splash-line-wrapper"><div class="splash-line splash-line-2" id="splash-l2">WANT TO SEE SOMETHING COOL?</div></div>
+        <div class="splash-line-wrapper"><div class="splash-line splash-line-3" id="splash-l3">WELCOME TO MY PORTFOLIO!</div></div>
+        <div class="splash-line-wrapper mt-4"><div class="splash-line splash-line-4" id="splash-l4">LET'S JUMP IN!</div></div>
+      </div>
+    </div>
+    <nav class="neo-nav">
+      <!-- Watermark (Left) -->
+      <div class="neo-watermark">Khairul Aji Syafi'i</div>
+
+      <!-- Navigation Links (Center) -->
+      <div class="neo-nav-inner">
+        <div class="neo-nav-switch" id="nav-switch"></div>
+        <a href="#home" class="neo-nav-link active">HOME</a>
+        <a href="#about" class="neo-nav-link">ABOUT</a>
+        <a href="#skills" class="neo-nav-link">SKILLS</a>
+        <a href="#project" class="neo-nav-link">PROJECT</a>
+        <a href="#contact" class="neo-nav-link">CREDITS</a>
+      </div>
+      
+      <!-- Neo-Brutalist Dynamic Title (Right) -->
+      <div class="neo-header-title" id="terminal-title">
+        <span id="terminal-text">WELCOME TO MY PORTOFOLIO</span>
+      </div>
+    </nav>
+
+    <!-- Hamburger Button -->
+    <button class="neo-hamburger-btn" id="hamburger-btn">
+      <span class="hamburger-icon">☰</span>
+    </button>
+
+    <!-- Hamburger Menu Overlay -->
+    <aside class="hamburger-panel" id="hamburger-panel">
+      <div class="hamburger-header">
+        <h2>MENU</h2>
+        <button class="close-hamburger" id="close-hamburger-btn">×</button>
+      </div>
+      <div class="hamburger-content">
+        <a href="#" class="hamburger-link" id="theme-toggle">🌗 DARK MODE</a>
+        <a href="javascript:void(0)" class="hamburger-link" id="hamburger-comment-btn">💬 COMMENTS</a>
+        <a href="#" class="hamburger-link">🔑 LOGIN</a>
+        <a href="#about" class="hamburger-link hamburger-jump">ℹ️ INFO</a>
+        <a href="#contact" class="hamburger-link hamburger-jump">📞 CONTACT</a>
+      </div>
+    </aside>
+
     <section class="slide slide-home" id="home">
-      <p class="home-nav-name">Khairul Aji Syafi'i</p>
 
       <div class="hero-text-stack">
         <span class="hero-line hero-line-1" aria-hidden="true"
@@ -71,68 +143,129 @@
 
       <!-- Bottom orange mask -->
       <img src="assets/image/Mask-bg.png" class="home-mask" alt="" />
-    </section>
+    
+
+</section>
     <section class="slide slide-about" id="about">
-      <div class="top-about">
-        <p>INTRODUCED MYSELF</p>
-      </div>
       <div class="center-about">
-        <div class="center-about-left">
-          <div class="center-about-left-top">
-            <ul>
-              <li>turn</li>
-              <li><span>ideas</span></li>
-              <li>into</li>
-              <li>reality.</li>
-            </ul>
-          </div>
-          <div class="center-about-left-bottom">
-            <div class="tags">
-              <ul>
-                <li>20++ PROJECT</li>
-                <li>4++ CERTIFICATE</li>
-                <li>2K+ STARRED</li>
-              </ul>
+        <div class="about-card">
+          <!-- Left Pane -->
+          <div class="center-about-left reveal-left">
+            <div class="center-about-left-top">
+              <h2 class="hero-slogan">
+                <span class="black-text">turn</span><br>
+                <span class="white-text">ideas</span><br>
+                <span class="black-text">into</span><br>
+                <span class="black-text">reality.</span>
+              </h2>
             </div>
-            <div class="comment-button">COMMENTS</div>
+            <div class="center-about-left-bottom">
+              <div class="tags">
+                <span class="tag">20++ PROJECT</span>
+                <span class="tag">4+ CERTIFICATE</span>
+                <span class="tag">⭐ 2K+ STARRED</span>
+              </div>
+              <a href="javascript:void(0)" class="comment-button" id="openCommentsBtn" style="text-decoration: none; display: inline-block; text-align: center; box-sizing: border-box;">COMMENTS</a>
+            </div>
           </div>
-        </div>
-        <div class="center-about-right">
-          <div class="center-about-right-left">
-            <p class="question">- WHO IAM?</p>
-            <p class="answer">FULLSTACK WEB DEVELOPER & DEVOPS ENTHUSIAST</p>
-            <p class="question">- LOCATION AT</p>
-            <p class="answer">TANGERANG SELATAN,BANTEN,INDONESIA 15520</p>
+          
+          <!-- Right Pane -->
+          <div class="center-about-right reveal-right">
+            <div class="about-right-content">
+              <!-- Left Column: Q&A -->
+              <div class="about-qa">
+            <div class="qa-item">
+              <p class="question">— WHO IAM?</p>
+              <p class="answer">FULLSTACK WEB-<br>DEVELOPER &<br>DEVOPS<br>ENTHUSIAST</p>
+            </div>
+            <div class="qa-item">
+              <p class="question">— LOCATION AT</p>
+              <p class="answer">TANGERANG<br>SELATAN,BANTEN<br>,INDONESIA<br>15520</p>
+            </div>
           </div>
-          <div class="center-about-right-right">
-            <p>
-              I am a Full-Stack Web Developer and Devops enthusiast who is
-              passionate about building scalable, I enjoy working across both
-              front-end and back-end development, <br /><br />
-              transforming ideas into functional web applications that deliver
-              aeemless user experiences. Beyond development, Iam interested in
-              DevOps practices, automation, cloud technologies, and system
-              optimization. I am always eager to learn new technologies, solve
-              complex problems, and continuously improve my skills to create
-              reliable and impactful software
-            </p>
+              <!-- Right Column: Paragraphs -->
+              <div class="about-description">
+                <p>I am a Full-Stack Web Developer and DevOps enthusiast who is passionate about building scalable, efficient, and user-friendly digital solutions. I enjoy working across both front-end and back-end development,</p>
+                <br>
+                <p>transforming ideas into functional web applications that deliver seamless user experiences. Beyond development, I am interested in DevOps practices, automation, cloud technologies, and system optimization. I am always eager to learn new technologies, solve complex problems, and continuously improve my skills to create reliable and impactful software.</p>
+              </div>
+            </div>
+            <!-- Bottom Line & Order Text / Social Links -->
+            <div class="about-right-bottom">
+              <div class="social-pill">
+                <a href="https://wa.me/qr/RBJP33ZJD5AVJ1" target="_blank" class="social-icon"><img src="assets/logo/whatsapp.png" alt="WhatsApp"></a>
+                <a href="https://github.com/Khairulajisyafii" target="_blank" class="social-icon"><img src="assets/logo/github.png" alt="GitHub"></a>
+                <a href="https://www.instagram.com/kkkrulll" target="_blank" class="social-icon"><img src="assets/logo/instagram.png" alt="Instagram"></a>
+                <a href="javascript:void(0)" class="social-icon"><img src="assets/logo/youtube.png" alt="YouTube"></a>
+                <a href="https://www.facebook.com/khairul.a.syafii.3" target="_blank" class="social-icon"><img src="assets/logo/facebook.png" alt="Facebook"></a>
+                <a href="https://www.tiktok.com/@kkkrull" target="_blank" class="social-icon"><img src="assets/logo/tiktok.png" alt="TikTok"></a>
+                <a href="https://www.linkedin.com/in/khairulaji-syafi-i-5450113b5" target="_blank" class="social-icon"><img src="assets/logo/linkedin.png" alt="LinkedIn"></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="jump-into-action">
-        <p class="jump-text">JUMP INTO ACTION</p>
-        <div class="button-jump">
-          <div class="jump">SKILLS</div>
-          <div class="jump">PROJECT</div>
-          <div class="jump">CREDITS</div>
+      
+    
+      <div class="about-footer" style="margin-top:auto; width:100%; z-index:10;">
+        <div class="neo-marquee-container">
+          <div class="neo-marquee-content">
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+          </div>
+          <div class="neo-marquee-content" aria-hidden="true">
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+          </div>
         </div>
       </div>
-    </section>
+</section>
     <section class="slide slide-skills" id="skills">
-      <div class="top-about">
-        <p>TECH STACK</p>
-      </div>
       <div class="book-skills">
         <div class="left-buttonbook" id="left"></div>
         <div class="parent-book">
@@ -165,12 +298,12 @@
                     <p>javascript</p>
                   </div>
                   <div class="box">
-                    <img src="assets/logo/react.png" alt="React" />
-                    <p>react</p>
+                    <img src="assets/logo/nextjs.png" alt="next.js" />
+                    <p>next.js</p>
                   </div>
                   <div class="box">
-                    <img src="assets/logo/tailwind.png" alt="Tailwind" />
-                    <p>tailwind</p>
+                    <img src="assets/logo/typescript.png" alt="typescript" />
+                    <p>typescript</p>
                   </div>
                 </div>
               </div>
@@ -188,8 +321,12 @@
                     <p>python</p>
                   </div>
                   <div class="box">
-                    <img src="assets/logo/firebase.png" alt="Firebase" />
-                    <p>firebase</p>
+                    <img src="assets/logo/postgres.png" alt="postgres" />
+                    <p>postgresql</p>
+                  </div>
+                  <div class="box">
+                    <img src="assets/logo/prisma.png" alt="prisma" />
+                    <p>Prisma</p>
                   </div>
                 </div>
               </div>
@@ -236,15 +373,851 @@
         </div>
         <div class="right-buttonbook" id="right"></div>
       </div>
-      <div class="jump-into-action">
-        <p class="jump-text">JUMP INTO ACTION</p>
-        <div class="button-jump">
-          <div class="jump">HOME</div>
-          <div class="jump">PROJECT</div>
-          <div class="jump">CREDITS</div>
+      
+    
+      
+
+      <div class="about-footer" style="margin-top:auto; width:100%; z-index:10;">
+        <div class="neo-marquee-container">
+          <div class="neo-marquee-content">
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+          </div>
+          <div class="neo-marquee-content" aria-hidden="true">
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+          </div>
+        </div>
+      </div>
+</section>
+
+    <!-- Slide 4: Project -->
+    <section class="slide slide-project orange-grid-bg" id="project">
+      <div class="project-content-wrapper">
+        <div class="film-strip-container">
+          <div class="film-strip-track">
+            <!-- First Set -->
+            <div class="project-set">
+              <div class="project-card" onclick="openProjectModal('efficiweb')" style="cursor: pointer;">
+                <div class="project-image"><img src="assets/image/efficiweb_preview.png" alt="Efficiweb" /></div>
+                <div class="project-info">
+                  <h3>EFFICIWEB</h3>
+                  <p>Minimalist Frontend Developer Companion</p>
+                  <div class="project-tech"><span>PYTHON</span><span>CUSTOMTKINTER</span><span>JSON</span></div>
+                </div>
+              </div>
+              <div class="project-card" onclick="openProjectModal('waveflow')" style="cursor: pointer;">
+                <div class="project-image"><img src="assets/image/waveflow_preview.png" alt="Waveflow" /></div>
+                <div class="project-info">
+                  <h3>WAVEFLOW</h3>
+                  <p>Terpusat menggabungkan manajemen proyek Kanban dengan CI/CD.</p>
+                  <div class="project-tech"><span>NEXT.JS</span><span>PRISMA</span><span>POSTGRESQL</span></div>
+                </div>
+              </div>
+              <div class="project-card" onclick="openProjectModal('efficiweb')" style="cursor: pointer;">
+                <div class="project-image"><img src="assets/image/efficiweb_preview.png" alt="Efficiweb" /></div>
+                <div class="project-info">
+                  <h3>EFFICIWEB</h3>
+                  <p>Minimalist Frontend Developer Companion</p>
+                  <div class="project-tech"><span>PYTHON</span><span>CUSTOMTKINTER</span><span>JSON</span></div>
+                </div>
+              </div>
+              <div class="project-card" onclick="openProjectModal('waveflow')" style="cursor: pointer;">
+                <div class="project-image"><img src="assets/image/waveflow_preview.png" alt="Waveflow" /></div>
+                <div class="project-info">
+                  <h3>WAVEFLOW</h3>
+                  <p>Terpusat menggabungkan manajemen proyek Kanban dengan CI/CD.</p>
+                  <div class="project-tech"><span>NEXT.JS</span><span>PRISMA</span><span>POSTGRESQL</span></div>
+                </div>
+              </div>
+            </div>
+            <!-- Second Set -->
+            <div class="project-set">
+              <div class="project-card" onclick="openProjectModal('efficiweb')" style="cursor: pointer;">
+                <div class="project-image"><img src="assets/image/efficiweb_preview.png" alt="Efficiweb" /></div>
+                <div class="project-info">
+                  <h3>EFFICIWEB</h3>
+                  <p>Minimalist Frontend Developer Companion</p>
+                  <div class="project-tech"><span>PYTHON</span><span>CUSTOMTKINTER</span><span>JSON</span></div>
+                </div>
+              </div>
+              <div class="project-card" onclick="openProjectModal('waveflow')" style="cursor: pointer;">
+                <div class="project-image"><img src="assets/image/waveflow_preview.png" alt="Waveflow" /></div>
+                <div class="project-info">
+                  <h3>WAVEFLOW</h3>
+                  <p>Terpusat menggabungkan manajemen proyek Kanban dengan CI/CD.</p>
+                  <div class="project-tech"><span>NEXT.JS</span><span>PRISMA</span><span>POSTGRESQL</span></div>
+                </div>
+              </div>
+              <div class="project-card" onclick="openProjectModal('efficiweb')" style="cursor: pointer;">
+                <div class="project-image"><img src="assets/image/efficiweb_preview.png" alt="Efficiweb" /></div>
+                <div class="project-info">
+                  <h3>EFFICIWEB</h3>
+                  <p>Minimalist Frontend Developer Companion</p>
+                  <div class="project-tech"><span>PYTHON</span><span>CUSTOMTKINTER</span><span>JSON</span></div>
+                </div>
+              </div>
+              <div class="project-card" onclick="openProjectModal('waveflow')" style="cursor: pointer;">
+                <div class="project-image"><img src="assets/image/waveflow_preview.png" alt="Waveflow" /></div>
+                <div class="project-info">
+                  <h3>WAVEFLOW</h3>
+                  <p>Terpusat menggabungkan manajemen proyek Kanban dengan CI/CD.</p>
+                  <div class="project-tech"><span>NEXT.JS</span><span>PRISMA</span><span>POSTGRESQL</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-footer-tilted">
+          <div class="project-footer-left">
+            <p class="project-count">
+              <span class="count-num">20++</span>
+              <span class="count-label">PROJECT</span>
+            </p>
+            <p class="project-cta">LETS CREATE TOGETHER</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard Unrotated Jump Into Action (Replaced with Marquee) -->
+      
+    
+      
+
+      <div class="about-footer" style="margin-top:auto; width:100%; z-index:10;">
+        <div class="neo-marquee-container">
+          <div class="neo-marquee-content">
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+          </div>
+          <div class="neo-marquee-content" aria-hidden="true">
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+          </div>
+        </div>
+      </div>
+</section>
+
+    <!-- Slide 5: Contact / Connect With Me -->
+    <section class="slide slide-contact orange-grid-bg" id="contact">
+      
+      <h2 class="contact-title">CONNECT WITH ME!</h2>
+      
+      <div class="contact-grid">
+        <a href="mailto:skhairulaji@gmail.com" target="_blank" class="contact-item" style="text-decoration:none; color:inherit;">
+          <div class="contact-icon"><img src="assets/logo/email2.png" alt="Email"/></div>
+          <p>skhairulaji@gmail.com</p>
+        </a>
+        <a href="https://www.instagram.com/kkkrulll" target="_blank" class="contact-item" style="text-decoration:none; color:inherit;">
+          <div class="contact-icon"><img src="assets/logo/instagram2.png" alt="Instagram"/></div>
+          <p>kkkrull</p>
+        </a>
+        <a href="https://wa.me/qr/RBJP33ZJD5AVJ1" target="_blank" class="contact-item" style="text-decoration:none; color:inherit;">
+          <div class="contact-icon"><img src="assets/logo/whatsapp2.png" alt="WhatsApp"/></div>
+          <p>+6289502182531</p>
+        </a>
+        <a href="https://www.linkedin.com/in/khairulaji-syafi-i-5450113b5" target="_blank" class="contact-item" style="text-decoration:none; color:inherit;">
+          <div class="contact-icon"><img src="assets/logo/linkedin2.png" alt="LinkedIn"/></div>
+          <p>khairul aji syafi'i</p>
+        </a>
+        <a href="https://www.facebook.com/khairul.a.syafii.3" target="_blank" class="contact-item" style="text-decoration:none; color:inherit;">
+          <div class="contact-icon"><img src="assets/logo/facebook2.png" alt="Facebook"/></div>
+          <p>khairul aji syafi'i</p>
+        </a>
+        <a href="https://github.com/Khairulajisyafii" target="_blank" class="contact-item" style="text-decoration:none; color:inherit;">
+          <div class="contact-icon"><img src="assets/logo/github2.png" alt="GitHub"/></div>
+          <p>kerulsukee</p>
+        </a>
+      </div>
+
+      <p class="footer-text">khairul aji syafi'i @all right reserved</p>
+
+      <div class="contact-mask-wrapper">
+        <img src="assets/image/cloud-mask.svg" class="contact-mask" alt="mask" />
+      </div>
+    
+      
+
+      <div class="about-footer" style="margin-top:auto; width:100%; z-index:10;">
+        <div class="neo-marquee-container">
+          <div class="neo-marquee-content">
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+          </div>
+          <div class="neo-marquee-content" aria-hidden="true">
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#home" class="marquee-link">KHAIRUL AJI SYAFI'I</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#about" class="marquee-link">WEB DEVELOPER</a>
+            <span class="marquee-separator">✦</span>
+            <a href="#skills" class="marquee-link">DEVOPS ENTHUSIAST</a>
+            <span class="marquee-separator">✦</span>
+          </div>
+        </div>
+      </div>
+</section>
+
+    <!-- Slide 6: Comments -->
+    <section class="slide slide-comments orange-grid-bg" id="comments" style="display: none;">
+      <a href="javascript:void(0)" class="back-btn" id="closeCommentsBtn">← BACK</a>
+      
+      <!-- Login Overlay -->
+      <div class="login-overlay" id="loginOverlay">
+        <div class="login-modal">
+          <h2>LOGIN TO COMMENT</h2>
+          <p>Join the discussion by logging in or continue as guest.</p>
+          
+          <!-- Email Login Form -->
+          <div class="email-login-form">
+            <input type="email" class="login-input" placeholder="Email Address" />
+            <input type="password" class="login-input" placeholder="Password" />
+            <button class="login-submit-btn" onclick="dismissLogin()">LOGIN</button>
+          </div>
+
+          <div class="login-divider">
+            <span>OR</span>
+          </div>
+
+          <!-- Social Login Buttons -->
+          <div class="login-buttons">
+            <button class="login-icon-btn fb-btn" title="Facebook" onclick="dismissLogin()">📘</button>
+            <button class="login-icon-btn github-btn" title="GitHub" onclick="dismissLogin()">🐙</button>
+            <button class="login-icon-btn google-btn" title="Google" onclick="dismissLogin()">🔴</button>
+            <button class="login-btn guest-btn" onclick="dismissLogin()">👤 GUEST</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="comments-container" id="commentsContainer">
+        <div class="comments-header">
+          <h2>142 Comments</h2>
+          <div class="sort-by">
+            <span class="sort-label">Sort by:</span>
+            <select class="sort-select">
+              <option>Top Comments</option>
+              <option>Newest First</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Add Comment Input (YouTube style) -->
+        <div class="comment-input-row">
+          <div class="comment-avatar" style="background-image: url('assets/image/me.png'); background-size: cover; background-position: top;"></div>
+          <div class="comment-input-wrapper">
+            <input type="text" class="youtube-input" placeholder="Add a comment..." />
+            <div class="comment-input-actions">
+              <button class="cancel-btn">CANCEL</button>
+              <button class="submit-btn">COMMENT</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comments List -->
+        <div class="comments-list">
+          
+          <!-- Comment Thread 1 -->
+          <div class="comment-thread">
+            <div class="comment-box">
+              <div class="comment-avatar" style="background-color: var(--blue);"></div>
+              <div class="comment-content">
+                <div class="comment-meta">
+                  <span class="comment-author">ALICE</span>
+                  <span class="comment-badge">GUEST</span>
+                  <span class="comment-date">2 hours ago</span>
+                </div>
+                <p class="comment-text">This portfolio is fire! Love the retro brutalist vibe. The CSS animations are super smooth and I really like the layout. Reminds me of old school forums but with a modern twist.</p>
+                <div class="comment-actions">
+                  <button class="comment-action-btn">👍 <span class="action-count">12</span></button>
+                  <button class="comment-action-btn">👎</button>
+                  <button class="comment-action-btn reply-btn">REPLY</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Nested Reply -->
+            <div class="comment-replies">
+              <div class="comment-box reply-box">
+                <div class="comment-avatar" style="background-image: url('assets/image/me.png'); background-size: cover; background-position: top;"></div>
+                <div class="comment-content">
+                  <div class="comment-meta">
+                    <span class="comment-author">KHAIRUL AJI</span>
+                    <span class="comment-badge dev-badge">DEVELOPER</span>
+                    <span class="comment-date">1 hour ago</span>
+                  </div>
+                  <p class="comment-text">Thanks Alice! I spent a lot of time tweaking the CSS to get that exact brutalist feel. Glad you noticed the smooth animations!</p>
+                  <div class="comment-actions">
+                    <button class="comment-action-btn">👍 <span class="action-count">45</span></button>
+                    <button class="comment-action-btn">👎</button>
+                    <button class="comment-action-btn reply-btn">REPLY</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Comment Thread 2 -->
+          <div class="comment-thread">
+            <div class="comment-box">
+              <div class="comment-avatar" style="background-color: var(--lavender);"></div>
+              <div class="comment-content">
+                <div class="comment-meta">
+                  <span class="comment-author">BOB_THE_BUILDER</span>
+                  <span class="comment-badge">MEMBER</span>
+                  <span class="comment-date">1 day ago</span>
+                </div>
+                <p class="comment-text">Wow, the UI is really unique. Great job on the CSS! Do you plan on adding a backend to this comment section?</p>
+                <div class="comment-actions">
+                  <button class="comment-action-btn">👍 <span class="action-count">3</span></button>
+                  <button class="comment-action-btn">👎</button>
+                  <button class="comment-action-btn reply-btn">REPLY</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
+
+    <!-- Project Modal Overlay -->
+    <div class="project-modal-overlay" id="projectModalOverlay" style="display: none;">
+      <div class="project-modal-content">
+        <div class="pm-header">
+          <h2 id="pm-title">Project Title</h2>
+          <button class="pm-close-btn" onclick="closeProjectModal()">X</button>
+        </div>
+        <div class="pm-body">
+          <p class="pm-subtitle" id="pm-subtitle">Project Subtitle</p>
+          <div class="pm-video-container">
+            <iframe id="pm-youtube" src="" allowfullscreen></iframe>
+          </div>
+          <div class="pm-links">
+            <a href="javascript:void(0)" target="_blank" class="pm-link-btn" id="pm-repo">GITHUB REPO</a>
+            <a href="javascript:void(0)" target="_blank" class="pm-link-btn" id="pm-web">VISIT WEB</a>
+          </div>
+          <div id="pm-desc">
+            <!-- Description injected here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/project-modal.js"></script>
     <script src="book.js"></script>
+    <script src="comments.js"></script>
+    <script>
+      // Custom mathematical smooth scroll (Guaranteed smooth on all browsers)
+      function customSmoothScrollTo(targetY, duration) {
+        duration = duration || 1200; // 1.2 seconds for a smoother, relaxed glide
+        var startY = window.pageYOffset;
+        var diff = targetY - startY;
+        var startTime = null;
+
+        // Temporarily disable CSS scrollBehavior just in case
+        document.documentElement.style.scrollBehavior = 'auto';
+        document.body.style.scrollBehavior = 'auto';
+
+        function ease(t) {
+          // easeOutCubic - Fast enough to respond, but softer than Quart
+          return 1 - Math.pow(1 - t, 3);
+        }
+
+        function step(currentTime) {
+          if (!startTime) startTime = currentTime;
+          var elapsed = currentTime - startTime;
+          var progress = Math.min(elapsed / duration, 1);
+          window.scrollTo(0, startY + diff * ease(progress));
+          
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            document.documentElement.style.scrollBehavior = '';
+            document.body.style.scrollBehavior = '';
+          }
+        }
+        requestAnimationFrame(step);
+      }
+
+      // Smooth scrolling for navigation buttons
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            var top = targetEl.getBoundingClientRect().top + window.pageYOffset;
+            customSmoothScrollTo(top, 1200);
+          }
+        });
+      });
+
+      // --- Neo-Brutalist Switch Navigation Logic ---
+      (function() {
+        const switchBg = document.getElementById('nav-switch');
+        const navLinks = document.querySelectorAll('.neo-nav-link');
+        
+        function updateSwitch(link) {
+          if (!link || !switchBg) return;
+          // Calculate the exact position and width of the clicked/active link
+          const linkRect = link.getBoundingClientRect();
+          const containerRect = link.parentElement.getBoundingClientRect();
+          
+          const offsetLeft = linkRect.left - containerRect.left;
+          const offsetTop = linkRect.top - containerRect.top;
+          const width = linkRect.width;
+          const height = linkRect.height;
+          
+          // Move the physical block
+          switchBg.style.transform = `translate(${offsetLeft}px, ${offsetTop}px)`;
+          switchBg.style.width = `${width}px`;
+          switchBg.style.height = `${height}px`;
+          
+          // Update active class for colors if needed
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+
+        window.addEventListener('resize', () => {
+          const activeLink = document.querySelector('.neo-nav-link.active');
+          if(activeLink) updateSwitch(activeLink);
+        });
+        // Initialize position on load and resize
+        window.addEventListener('load', () => {
+          const activeLink = document.querySelector('.neo-nav-link.active') || navLinks[0];
+          updateSwitch(activeLink);
+        });
+        window.addEventListener('resize', () => {
+          const activeLink = document.querySelector('.neo-nav-link.active') || navLinks[0];
+          updateSwitch(activeLink);
+        });
+
+        // Intersection Observer to track which section is currently on screen
+        const sections = document.querySelectorAll('.slide');
+        const terminalText = document.getElementById('terminal-text');
+        
+        // Map section IDs to their terminal titles
+        const sectionTitles = {
+          'home': 'WELCOME TO MY PORTOFOLIO',
+          'about': 'INTRODUCED MYSELF',
+          'skills': 'TECH STACK',
+          'project': "WHAT I'VE BEEN WORKIN ON",
+          'contact': 'LETS CONNECT WITH ME!',
+          'comments': 'COMMENTS SYSTEM'
+        };
+
+        const observerOptions = {
+          root: null,
+          rootMargin: '-50% 0px -50% 0px', // Trigger when section passes the middle of the screen
+          threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const currentId = entry.target.getAttribute('id');
+              
+              // Update Dynamic Title
+              if (terminalText && sectionTitles[currentId]) {
+                terminalText.innerText = sectionTitles[currentId];
+              }
+
+              // Update Nav Switch after layout reflows
+              const activeLink = document.querySelector(`.neo-nav-link[href="#${currentId}"]`);
+              if (activeLink) {
+                setTimeout(() => {
+                  updateSwitch(activeLink);
+                }, 10);
+              }
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach(section => {
+          observer.observe(section);
+        });
+      })();
+
+      // --- Hamburger Menu & Dark Mode Logic ---
+      (function() {
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const hamburgerPanel = document.getElementById('hamburger-panel');
+        const closeHamburgerBtn = document.getElementById('close-hamburger-btn');
+        const themeToggle = document.getElementById('theme-toggle');
+        const hamburgerCommentBtn = document.getElementById('hamburger-comment-btn');
+        
+        // Open/Close Hamburger
+        function toggleHamburger() {
+          hamburgerPanel.classList.toggle('open');
+        }
+        hamburgerBtn.addEventListener('click', toggleHamburger);
+        closeHamburgerBtn.addEventListener('click', toggleHamburger);
+
+        // Close Hamburger when a jump link is clicked
+        document.querySelectorAll('.hamburger-jump').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleHamburger();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+              var top = targetEl.getBoundingClientRect().top + window.pageYOffset;
+              customSmoothScrollTo(top, 1200);
+            }
+          });
+        });
+
+        // Dark Mode Logic
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          themeToggle.innerHTML = '☀️ LIGHT MODE';
+        }
+
+        themeToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const currentTheme = document.documentElement.getAttribute('data-theme');
+          if (currentTheme === 'dark') {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            themeToggle.innerHTML = '🌗 DARK MODE';
+          } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            themeToggle.innerHTML = '☀️ LIGHT MODE';
+          }
+        });
+
+        // Comments Link Logic (Programmatically click the existing comment button)
+        if (hamburgerCommentBtn) {
+          hamburgerCommentBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleHamburger();
+            const existingCommentBtn = document.getElementById('openCommentsBtn');
+            if (existingCommentBtn) {
+              existingCommentBtn.click();
+            }
+          });
+        }
+      })();
+
+      // --- Pixel-perfect infinite carousel ---
+      (function() {
+        var track = document.querySelector('.film-strip-track');
+        if (!track) return;
+        var firstSet = track.querySelector('.project-set');
+        if (!firstSet) return;
+
+        // Clone enough sets to always fill the 130vw container
+        // We need at least: ceil(containerWidth / setWidth) + 1 sets
+        var container = track.parentElement;
+        var containerW = container.offsetWidth;
+        var oneSetW = firstSet.getBoundingClientRect().width;
+
+        // Ensure we have enough sets (at least 4 for safety)
+        var existingSets = track.querySelectorAll('.project-set').length;
+        var needed = Math.max(4, Math.ceil(containerW / oneSetW) + 2);
+        for (var i = existingSets; i < needed; i++) {
+          track.appendChild(firstSet.cloneNode(true));
+        }
+
+        var pixelsPerSecond = 60; // constant speed
+        var offset = 0;
+        var paused = false;
+        var setWidth = 0;
+        var lastTime = 0;
+
+        function measureSet() {
+          setWidth = firstSet.getBoundingClientRect().width;
+        }
+        measureSet();
+        window.addEventListener('resize', function() {
+          measureSet();
+          // Re-clone if needed after resize
+          var cw = container.offsetWidth;
+          var need = Math.max(4, Math.ceil(cw / setWidth) + 2);
+          var current = track.querySelectorAll('.project-set').length;
+          for (var j = current; j < need; j++) {
+            track.appendChild(firstSet.cloneNode(true));
+          }
+        });
+
+        track.addEventListener('mouseenter', function() { paused = true; });
+        track.addEventListener('mouseleave', function() { paused = false; });
+
+        function animate(now) {
+          if (lastTime === 0) lastTime = now;
+          var delta = (now - lastTime) / 1000; // seconds since last frame
+          lastTime = now;
+
+          if (!paused && setWidth > 0) {
+            offset += pixelsPerSecond * delta;
+            if (offset >= setWidth) {
+              offset -= setWidth;
+            }
+            track.style.transform = 'translate3d(' + (-offset) + 'px, 0, 0)';
+          }
+          requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+      })();
+    </script>
+    <!-- Splash Screen JS -->
+    <script>
+      (function() {
+        const splash = document.getElementById('splash-screen');
+        if (!splash) return;
+
+        const lines = [
+          { el: document.getElementById('splash-l1'), text: "HEY YOU," },
+          { el: document.getElementById('splash-l2'), text: "WANT TO SEE SOMETHING COOL?" },
+          { el: document.getElementById('splash-l3'), text: "WELCOME TO MY PORTFOLIO!" },
+          { el: document.getElementById('splash-l4'), text: "LET'S JUMP IN!" }
+        ];
+
+        // Clear text initially
+        lines.forEach(item => {
+          if(item.el) {
+            // Keep the box styling for line 4, but empty text
+            item.el.textContent = "";
+            item.el.style.opacity = "1"; // Show the container, text is empty
+            item.el.style.transform = "translateY(0)"; // Remove old transition transforms
+          }
+        });
+
+        // Typing function
+        function typeText(element, text, speed, onComplete) {
+          element.classList.add('is-typing');
+          let i = 0;
+          function typeChar() {
+            if (i < text.length) {
+              element.textContent += text.charAt(i);
+              i++;
+              setTimeout(typeChar, speed);
+            } else {
+              element.classList.remove('is-typing');
+              if (onComplete) onComplete();
+            }
+          }
+          typeChar();
+        }
+
+        // Sequence
+        setTimeout(() => {
+          typeText(lines[0].el, lines[0].text, 60, () => {
+            setTimeout(() => {
+              typeText(lines[1].el, lines[1].text, 40, () => {
+                setTimeout(() => {
+                  typeText(lines[2].el, lines[2].text, 50, () => {
+                    setTimeout(() => {
+                      // For line 4 (button), maybe just fade it in or type it fast
+                      typeText(lines[3].el, lines[3].text, 50, () => {
+                        // Exit splash
+                        setTimeout(() => {
+                          splash.classList.add('done');
+                          document.body.classList.remove('splash-active');
+                          document.body.classList.add('splash-revealed');
+                          setTimeout(() => {
+                              splash.remove();
+                              window.dispatchEvent(new Event('resize'));
+                          }, 800);
+                        }, 1200);
+                      });
+                    }, 400);
+                  });
+                }, 400);
+              });
+            }, 300);
+          });
+        }, 500); // initial delay
+
+      })();
+    </script>
+    <!-- Scroll Reveal JS -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.15 // trigger when 15% of element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              // Optional: unobserve if you only want it to animate once
+              // observer.unobserve(entry.target);
+            } else {
+              // Remove this else block if you don't want elements to re-animate when scrolling up/down
+              entry.target.classList.remove('is-revealed');
+            }
+          });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
+        revealElements.forEach(el => observer.observe(el));
+      });
+    </script>
+  
+      
+  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.getElementById('neo-hamburger-btn');
+    const hamburgerMenu = document.getElementById('neo-hamburger-menu');
+    const darkModeToggle = document.getElementById('toggle-dark-mode');
+
+    if (hamburgerBtn && hamburgerMenu) {
+      hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('open');
+        hamburgerMenu.classList.toggle('show');
+      });
+    }
+
+    if (darkModeToggle) {
+      darkModeToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          document.documentElement.removeAttribute('data-theme');
+          darkModeToggle.innerText = 'DARK MODE';
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          darkModeToggle.innerText = 'LIGHT MODE';
+        }
+      });
+    }
+  });
+</script>
+
   </body>
 </html>
+

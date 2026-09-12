@@ -32,12 +32,9 @@
   --font-roboto-bold: "roboto-bold", monospace;
   --font-roboto-medium: "roboto-medium", monospace;
 }
-
 html {
-  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
-
 body {
   background: var(--cream);
   overflow-x: hidden;
@@ -51,7 +48,6 @@ body {
   min-height: 600px;
   position: relative;
   overflow: hidden;
-  scroll-snap-align: start;
 }
 
 .orange-grid-bg {
@@ -98,4 +94,95 @@ body {
 .jump-btn:hover {
   background: var(--white);
   color: var(--black);
+}
+
+/* ---- Neo-Brutalist Preloader ---- */
+#neo-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--cream);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#neo-preloader.hidden {
+  transform: translateY(-100%);
+}
+
+#preloader-text-container {
+  font-family: var(--font-nexa);
+  font-size: clamp(20px, 4vw, 40px); /* Slightly smaller to prevent cut off */
+  color: var(--black);
+  text-transform: uppercase;
+  max-width: 95vw; /* Much wider to allow text to fit */
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  gap: 6px; 
+}
+
+.preloader-char {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 3px solid var(--black); /* Normal borders, not blinking box */
+  box-shadow: 3px 3px 0px var(--black);
+  margin: 3px;
+  animation: popIn 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0) rotate(-5deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* Night Mode Variables */
+[data-theme='dark'] {
+  --cream: #181818;
+  --orange: #cc4a00;
+  --blue: #3a4a6b;
+  --lavender: #828ac4;
+  --black: #ffffff;
+  --white: #000000;
+}
+\n
+:root[data-theme="dark"] {
+  --cream: #181818;
+  --black: #fff8de;
+  --white: #121212;
+  --orange: #ff6202;
+  --blue: #879abf;
+  --lavender: #b7bdf7;
+}
+
+/* Ensure images/elements with explicit background aren't completely ruined, 
+   though brutalism dark mode looks good inverted too. */
+:root[data-theme="dark"] img {
+  /* if needed we can dim images */
+}
+\n
+/* Dark Mode Override */
+:root[data-theme="dark"] {
+  --cream: #181818;
+  --black: #fff8de;
+  --white: #121212;
+  --orange: #ff6202;
+  --blue: #879abf;
+  --lavender: #b7bdf7;
+}
+
+:root[data-theme="dark"] img {
+  filter: brightness(0.9);
 }

@@ -1,0 +1,210 @@
+/* ===== ELEGANT NEO-BRUTALIST SPLASH ===== */
+
+body.splash-active {
+  overflow: hidden;
+}
+
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cream, #fff8de);
+  pointer-events: all;
+}
+
+/* Subtle grid pattern overlay */
+#splash-screen::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Center content */
+.splash-center {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left align looks more elegant */
+  gap: 12px;
+}
+
+/* Wrapper for mask reveal */
+.splash-line-wrapper {
+  overflow: hidden;
+  display: block;
+}
+.splash-line-wrapper.mt-4 {
+  margin-top: 32px;
+}
+
+/* Each text line base */
+.splash-line {
+  font-family: var(--font-nexa);
+  color: var(--black);
+  line-height: 1.1;
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+.splash-line.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Specific styling */
+.splash-line-1 {
+  font-size: clamp(24px, 5vw, 48px);
+  letter-spacing: -0.5px;
+}
+
+.splash-line-2 {
+  font-size: clamp(32px, 7vw, 72px);
+  color: var(--black);
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+}
+
+.splash-line-3 {
+  font-size: clamp(16px, 3vw, 24px);
+  font-family: var(--font-roboto);
+  color: var(--blue, #576a8f);
+  margin-top: 8px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.splash-line-4 {
+  font-size: clamp(14px, 2vw, 20px);
+  font-family: var(--font-roboto-bold, var(--font-roboto));
+  background: var(--black);
+  color: var(--cream, #fff8de);
+  padding: 12px 32px;
+  border: 2px solid var(--black);
+  display: inline-block;
+  cursor: default;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+}
+
+/* Elegant Corner accents - thinner */
+.splash-accent {
+  position: absolute;
+  z-index: 3;
+}
+
+.splash-accent.tl {
+  top: 30px; left: 30px;
+  width: 30px; height: 30px;
+  border-top: 2px solid var(--black);
+  border-left: 2px solid var(--black);
+}
+
+.splash-accent.tr {
+  top: 30px; right: 30px;
+  width: 30px; height: 30px;
+  border-top: 2px solid var(--black);
+  border-right: 2px solid var(--black);
+}
+
+.splash-accent.bl {
+  bottom: 30px; left: 30px;
+  width: 30px; height: 30px;
+  border-bottom: 2px solid var(--black);
+  border-left: 2px solid var(--black);
+}
+
+.splash-accent.br {
+  bottom: 30px; right: 30px;
+  width: 30px; height: 30px;
+  border-bottom: 2px solid var(--black);
+  border-right: 2px solid var(--black);
+}
+
+/* Exit animation - sharp elegant slide up */
+#splash-screen.done {
+  animation: elegantExit 0.8s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes elegantExit {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
+/* Main content reveal */
+body.splash-revealed .neo-nav {
+  animation: contentSlideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body.splash-revealed .slide-home {
+  animation: contentFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+@keyframes contentSlideDown {
+  from { opacity: 0; transform: translate(-50%, -20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@keyframes contentFadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Typing cursor animation (hilang timbul) */
+.splash-line::after {
+  content: '█';
+  display: inline-block;
+  margin-left: 4px;
+  opacity: 0;
+  color: var(--orange);
+}
+
+.splash-line.is-typing::after {
+  animation: blinkCursor 0.6s step-end infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+/* Home Slide Entrance Animations */
+.slide-home .hero-line { opacity: 0; transform: translateY(50px); }
+.slide-home .hero-person { opacity: 0; transform: scale(0.8); }
+.slide-home .hero-info { opacity: 0; transform: translateX(50px); }
+.slide-home .hero-cta { opacity: 0; transform: translate(-50%, 30px); }
+
+body.splash-revealed .slide-home .hero-line { opacity: 1; transform: translateY(0); transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+body.splash-revealed .slide-home .hero-line-1 { transition-delay: 0.1s; }
+body.splash-revealed .slide-home .hero-line-2 { transition-delay: 0.2s; }
+body.splash-revealed .slide-home .hero-line-3 { transition-delay: 0.3s; }
+
+body.splash-revealed .slide-home .hero-person { opacity: 1; transform: scale(1); transition: opacity 1s ease-out 0.4s, transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s; }
+body.splash-revealed .slide-home .hero-info { opacity: 1; transform: translateX(0); transition: opacity 0.8s ease-out 0.6s, transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s; }
+body.splash-revealed .slide-home .hero-cta { opacity: 1; transform: translate(-50%, 0); transition: opacity 0.8s ease-out 0.8s, transform 0.8s ease-out 0.8s; }
+
+/* Looping Floating Animation for Buttons */
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+.hero-cta .btn-3d {
+  animation: floatBob 4s ease-in-out infinite;
+}
+.hero-cta .btn-3d:nth-child(2) {
+  animation-delay: 2s;
+}

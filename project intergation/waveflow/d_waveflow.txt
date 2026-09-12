@@ -1,0 +1,57 @@
+## 1. Latar Belakang Masalah (The Problem)
+
+Dalam proses pengembangan perangkat lunak modern, tim developer sering menggunakan berbagai platform untuk menjalankan workflow mereka. Manajemen tugas biasanya dilakukan melalui platform seperti Trello atau Jira, sementara proses testing dan deployment dipantau melalui platform seperti GitHub. Kondisi ini membuat workflow menjadi terfragmentasi.
+
+Akibatnya, anggota tim dan project manager dapat kesulitan mendapatkan gambaran menyeluruh mengenai hubungan antara pekerjaan yang sedang dilakukan dengan kondisi kode. Sebuah task mungkin terlihat sudah selesai, tetapi belum tentu kode yang dihasilkan berhasil melewati proses testing atau bahkan dapat menyebabkan masalah pada sistem.
+
+## 2. Solusi (The Solution)
+
+Untuk mengatasi masalah tersebut, saya mengembangkan **Waveflow**, sebuah platform terpusat yang menggabungkan manajemen proyek berbasis Agile Kanban dengan pemantauan status CI/CD.
+
+Melalui Waveflow, tim dapat mengelola task, berkolaborasi dalam satu project, dan memantau hasil proses testing serta deployment dari satu dashboard. Dengan demikian, proses pengembangan menjadi lebih terintegrasi dan tim dapat mengetahui kondisi kode tanpa harus berpindah-pindah platform.
+
+## 3. Fitur Utama (Core Features)
+
+**Automated CI/CD Webhook Integration**
+
+Waveflow menyediakan endpoint webhook yang dapat dihubungkan dengan GitHub Actions. Setiap kali proses testing atau deployment selesai, GitHub secara otomatis mengirimkan hasil proses tersebut ke Waveflow. Status pipeline kemudian diperbarui secara otomatis menjadi **SUCCESS** atau **FAILED**, sehingga tim dapat mengetahui kondisi terbaru dari kode mereka secara langsung.
+
+**Real-Time Collaborative Kanban Board**
+
+Waveflow menyediakan papan Kanban interaktif dengan beberapa tahap seperti **To Do, In Progress, Review, dan Done**. Perubahan task dapat tersinkronisasi secara otomatis sehingga anggota tim dapat melihat perkembangan pekerjaan tanpa harus melakukan refresh secara manual.
+
+**Role-Based Access Control (RBAC)**
+
+Waveflow menerapkan sistem role untuk mengatur akses dalam sebuah project. Owner dan Admin memiliki hak untuk mengelola anggota serta mengundang anggota baru melalui email, sementara anggota lainnya memiliki akses sesuai dengan role yang diberikan.
+
+**Dynamic UI & Dark Mode**
+
+Waveflow memiliki antarmuka yang responsif dengan dukungan Light Mode dan Dark Mode. Pergantian tema dibuat secara dinamis menggunakan CSS Variables sehingga tampilan tetap konsisten dan nyaman digunakan dalam berbagai kondisi.
+
+## 4. Kompleksitas Teknis (Technical Highlights)
+
+Waveflow dibangun menggunakan arsitektur full-stack yang memanfaatkan teknologi web modern.
+
+**Frontend & Backend**
+
+Aplikasi dikembangkan menggunakan **Next.js dengan App Router dan TypeScript**, sehingga frontend dan backend dapat terintegrasi dalam satu aplikasi.
+
+**Database & ORM**
+
+Data aplikasi disimpan menggunakan **PostgreSQL** dan dikelola melalui **Prisma ORM**. Struktur database dirancang untuk menangani hubungan antara User, Project, Member, dan Task secara terstruktur.
+
+**Authentication & Security**
+
+Waveflow menerapkan autentikasi dengan password hashing menggunakan **bcrypt** serta session management menggunakan **JOSE/JWT**. Sistem ini dirancang agar kredensial pengguna tidak disimpan dalam bentuk plaintext dan akses ke data project dapat dibatasi berdasarkan role pengguna.
+
+**CI/CD & Webhook Communication**
+
+Salah satu bagian utama Waveflow adalah kemampuannya berkomunikasi dengan layanan eksternal melalui webhook. Waveflow menerima payload dari GitHub Actions, memvalidasi request menggunakan secret yang telah ditentukan, kemudian menerjemahkan hasil pipeline menjadi status yang dapat ditampilkan pada dashboard.
+
+## 5. Pembelajaran yang Saya Dapatkan (Learning Outcomes)
+
+Melalui project ini, saya belajar bagaimana berbagai sistem dapat berkomunikasi satu sama lain melalui internet dan bagaimana sebuah workflow software development dapat diintegrasikan ke dalam satu sistem.
+
+Saya juga belajar merancang sistem autentikasi, mengelola database relasional, serta memastikan webhook dapat memvalidasi request menggunakan secret tanpa mengekspos kredensial pengguna.
+
+Project ini membuat saya memahami bahwa membangun sebuah aplikasi bukan hanya tentang membuat fitur yang dapat digunakan, tetapi juga tentang membangun fondasi sistem yang terstruktur, aman, dan dapat diandalkan.
